@@ -51,7 +51,7 @@ export function InputRegister({ security, type, placeholder, ...rest }: Props) {
                         />
                     </View>
                 </RectButton>
-            </View>|
+            </View>
         </View>
     )
 }

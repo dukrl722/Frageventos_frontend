@@ -7,7 +7,7 @@ import { Login } from "../screens/Login";
 import { Events } from "../screens/Events";
 import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
-import {TermsUse} from "../screens/TermsUse"
+import { TermsUse } from "../screens/TermsUse"
 import { NavigationContainer } from '@react-navigation/native';
 
 
@@ -23,12 +23,12 @@ export function AuthRoutes() {
                         backgroundColor: theme.colors.primary
                     }
                 }}>
-                    
+
                 <Screen
                     name="Register"
                     component={Register}
                 />
-                  <Screen
+                <Screen
                     name="TermsUse"
                     component={TermsUse}
                 />
