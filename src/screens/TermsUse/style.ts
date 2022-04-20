@@ -1,26 +1,25 @@
 import { StyleSheet } from "react-native";
-import {theme} from "../../global/styles/theme";
+import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
 
     container: {
-     flex:1,
-     backgroundColor:'#b3b3b3',
-    
+        flex: 1,
+        backgroundColor: theme.colors.Background
     },
-    Viewtitle:{
+    Viewtitle: {
         alignItems: 'center',
-        justifyContent: 'center', 
-       marginBottom:10
+        justifyContent: 'center',
+        marginBottom: 10
     },
-    title:{
+    title: {
         fontWeight: "bold",
-        fontSize:20
+        fontSize: 20
     },
-    ViewSubtitle:{
+    ViewSubtitle: {
 
     },
-    Subtitle:{
-        
+    Subtitle: {
+
     }
 });

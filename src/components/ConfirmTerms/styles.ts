@@ -4,13 +4,13 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop:12
+        marginTop: 12
     },
     check: {
         width: 14,
         height: 14,
-        backgroundColor: '#c4c4c4',
-        borderColor: '#5b3458',
+        backgroundColor: theme.colors.TermsDisabled,
+        borderColor: theme.colors.TermsEnabled,
         borderWidth: 2,
         borderRadius: 3,
         marginRight: 10
@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
     checked: {
         width: 14,
         height: 14,
-        backgroundColor: '#5b3458',
-        borderColor: '#c4c4c4',
+        backgroundColor: theme.colors.TermsEnabled,
+        borderColor: theme.colors.TermsDisabled,
         borderWidth: 2,
         borderRadius: 3,
         marginRight: 10
@@ -35,25 +35,25 @@ export const styles = StyleSheet.create({
     terms: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center', 
+        justifyContent: 'center',
     },
     buttonCheck: {
         width: '65%',
         height: 50,
-        backgroundColor: '#7d7d7d',
+        backgroundColor: theme.colors.checkBox,
         borderRadius: 30,
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop:10,
+        marginTop: 10,
     },
-       buttonChecked: {
+    buttonChecked: {
         width: '65%',
         height: 50,
-        backgroundColor: '#5b3458',
+        backgroundColor: theme.colors.TermsEnabled,
         borderRadius: 30,
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop:10,
+        marginTop: 10,
     },
     titleButton: {
         flex: 1,
@@ -62,8 +62,8 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.title700,
         textAlign: 'center'
     },
-    teste:{
+    teste: {
         flexDirection: 'row',
-        justifyContent: 'center', 
+        justifyContent: 'center',
     }
 });

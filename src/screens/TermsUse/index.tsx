@@ -5,7 +5,6 @@ import { styles } from './style';
 
 import { Header } from '../../components/Header';
 
-
 export function TermsUse() {
 
     return (

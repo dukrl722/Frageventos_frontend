@@ -4,6 +4,7 @@ import { TextInput, View, Text } from 'react-native';
 import { RectButton } from "react-native-gesture-handler";
 import { Feather } from '@expo/vector-icons'
 import { styles } from './styles';
+import { theme } from "../../global/styles/theme";
 
 type Props = {
     type?: string;
@@ -27,6 +28,7 @@ export function InputRegister({ security, type, placeholder, ...rest }: Props) {
                     />
                 </View>
             </View>
+
             <View style={[styles.input, security ? { display: 'flex' } : { display: 'none' }]}>
                 <View style={styles.labels}>
                     <TextInput
@@ -47,11 +49,12 @@ export function InputRegister({ security, type, placeholder, ...rest }: Props) {
                         <Feather
                             name={eyes ? 'eye-off' : "eye"}
                             size={15}
-                            color='#bfc6d5'
+                            color={theme.colors.EyesIcons}
                         />
                     </View>
                 </RectButton>
             </View>
+
         </View>
     )
 }

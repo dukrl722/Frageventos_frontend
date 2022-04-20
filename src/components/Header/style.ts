@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         height: 130,
         alignItems: 'center',
         justifyContent: 'center',
-
     },
     imageContainer: {
         width: 80,
@@ -20,6 +19,6 @@ export const styles = StyleSheet.create({
         left: 30,
         top: getStatusBarHeight() + 35,
         position: 'absolute',
-        color:'white'
+        color: theme.colors.ArrowIcon
     }
 });

@@ -21,7 +21,6 @@ export function Header({ object, ...rest }: Props) {
     return (
 
         <LinearGradient colors={[headerPrimary, headerSecondary]} style={styles.container}>
-
             <Feather
                 name={object ? object : ""}
                 color={'black'}
@@ -29,7 +28,6 @@ export function Header({ object, ...rest }: Props) {
                 onPress={handleReturn}
                 style={styles.arrow}
             />
-
             <Image source={Logo} style={styles.imageContainer} />
         </LinearGradient>
     )
