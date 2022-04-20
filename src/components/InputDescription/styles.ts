@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
@@ -7,13 +7,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     input: {
-        height: 45,
         width: '80%',
-        backgroundColor: theme.colors.inputsBackground,
-        justifyContent: 'center',
-        borderColor: theme.colors.border,
-        borderWidth: 1,
+        backgroundColor: theme.colors.inputRegister,
         marginTop: 10,
+        marginBottom: 30,
+        color: 'white',
         borderRadius: 15,
         shadowColor: "#000",
         shadowOpacity: 0.23,
@@ -23,13 +21,14 @@ export const styles = StyleSheet.create({
         },
         shadowRadius: 2.62,
         elevation: 4,
+        borderColor: theme.colors.border,
+        borderWidth: 1,
+        justifyContent: 'center',
     },
     labels: {
-        paddingLeft: 10,
+        marginHorizontal: 10,
+        marginVertical: 5,
         color: theme.colors.textInput
     },
-    eyes: {
-        position: 'absolute',
-        right: 10
-    }
-});
+
+})

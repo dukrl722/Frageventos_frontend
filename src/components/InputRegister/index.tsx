@@ -36,7 +36,7 @@ export function InputRegister({ security, type, placeholder, ...rest }: Props) {
                         secureTextEntry={eyes}
                         keyboardType='default'
                         placeholderTextColor="white"
-                        style={[{ color: 'white' }]}
+        
                     />
                 </View>
                 <RectButton

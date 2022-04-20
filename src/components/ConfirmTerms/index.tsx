@@ -5,7 +5,10 @@ import { useNavigation } from "@react-navigation/native";
 
 import { styles } from './styles';
 
-export function ConfirmTerms() {
+type Props = {
+    Name: string
+}
+export function ConfirmTerms({ Name }: Props) {
     const [check, setCheck] = useState(false);
 
     const navigation = useNavigation()
@@ -36,7 +39,7 @@ export function ConfirmTerms() {
                     enabled={check}
                 >
                     <Text style={styles.titleButton}>
-                        Cadastrar
+                        {Name}
                     </Text>
 
                 </RectButton>

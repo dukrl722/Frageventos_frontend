@@ -14,13 +14,14 @@ export const theme = {
         Background: '#b3b3b3',
         inputsBackground: '#2d2d2d',
         border: '#eff3',
-        fontInputs: '#FFF',
         EyesIcons: '#bfc6d5',
         ArrowIcon: '#FFF',
 
         TermsEnabled: '#5b3458',
         TermsDisabled: '#c4c4c4',
         checkBox: '#7d7d7d',
+
+        inputRegister:'#c4c4c4'
     },
 
     fonts: {

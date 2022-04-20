@@ -25,7 +25,7 @@ export function Register() {
                 <InputRegister placeholder='Senha' security />
                 <InputRegister placeholder='Confirme a Senha' security />
             </View>
-            <ConfirmTerms />
+            <ConfirmTerms Name='Cadastrar'/>
         </ScrollView>
     );
 }

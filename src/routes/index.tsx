@@ -9,7 +9,7 @@ import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
 import { TermsUse } from "../screens/TermsUse"
 import { NavigationContainer } from '@react-navigation/native';
-
+import { NewEvent } from '../screens/NewEvent';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -25,8 +25,8 @@ export function AuthRoutes() {
                 }}>
 
                 <Screen
-                    name="Register"
-                    component={Register}
+                    name="NewEvent"
+                    component={NewEvent}
                 />
                 <Screen
                     name="TermsUse"
