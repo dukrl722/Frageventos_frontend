@@ -28,5 +28,6 @@ export const theme = {
         title700: 'Montserrat_700Bold',
         text400: 'Montserrat_400Regular',
         text500: 'Montserrat_500Medium',
+        text600:'Montserrat_600SemiBold'
     }
 };
