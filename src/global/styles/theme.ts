@@ -1,7 +1,7 @@
 export const theme = {
     colors: {
         primary: '#4F4F4F',
-
+        white:'#fff',
         secondary: '#626060',
 
         input: '#000',
@@ -28,5 +28,6 @@ export const theme = {
         title700: 'Montserrat_700Bold',
         text400: 'Montserrat_400Regular',
         text500: 'Montserrat_500Medium',
+        text600:'Montserrat_600SemiBold'
     }
 };

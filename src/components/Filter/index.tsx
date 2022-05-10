@@ -1,15 +1,17 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
 
-import Lupa from '../../assets/lupa.png';
-
+import { TextInput, View } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import { styles } from './style';
+import { theme } from '../../global/styles/theme';
 
 export function Filter() {
     return (
         <View style={styles.container}>
-            <Text style={styles.textContainer}>Buscar Eventos</Text>
-            <Image source={Lupa} style={styles.imageContainer} />
+            <View style={styles.search}>
+                <TextInput placeholder="Buscar Eventos" placeholderTextColor={theme.colors.white} />
+            </View>
+            <Feather name="search" size={24} color={theme.colors.white} />
         </View>
     )
 }

@@ -23,7 +23,10 @@ export function AuthRoutes() {
                         backgroundColor: theme.colors.primary
                     }
                 }}>
-
+                <Screen
+                    name="Login"
+                    component={Login}
+                />
                 <Screen
                     name="NewEvent"
                     component={NewEvent}
@@ -32,7 +35,18 @@ export function AuthRoutes() {
                     name="TermsUse"
                     component={TermsUse}
                 />
-
+                <Screen
+                    name="Register"
+                    component={Register}
+                />
+                <Screen
+                    name="Events"
+                    component={Events}
+                />
+                <Screen
+                    name="Categories"
+                    component={Categories}
+                />
             </Navigator>
         </NavigationContainer>
     )

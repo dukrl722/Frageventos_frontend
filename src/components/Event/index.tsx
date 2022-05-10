@@ -1,26 +1,33 @@
 import React from 'react';
-import {Image, ImageBackground, Text, View} from 'react-native';
+import { Image, ImageBackground, Text, View } from 'react-native';
 
-import {styles} from './style';
+import { styles } from './style';
 
 import EventImage from '../../assets/backgroundEvent.png';
+import { RectButton, ScrollView } from 'react-native-gesture-handler';
 
-export type EventProps = {
-    id: string;
-    name: string;
-    image: string;
-}
+import { events } from '../../utils/Events';
 
-type Props = {
-    data: EventProps;
-}
-
-export function Event({data}: Props) {
+export function Event() {
     return (
-        <View style={styles.container}>
-            <ImageBackground source={EventImage} style={styles.imageContainer}>
-                <Text style={styles.textContainer}>{data.name}</Text>
-            </ImageBackground>
-        </View>
+        <ScrollView style={styles.container}>
+            {
+                events.map((request, i) => (
+                    <RectButton key={i}>
+                        <ImageBackground source={request.image} style={styles.imageContainer}>
+                            <View style={styles.date}>
+                                <Text style={styles.dateDay}>
+                                    {request.day}
+                                </Text>
+                                <Text style={styles.dateMonth}>
+                                    {request.month}
+                                </Text>
+                            </View>
+                            <Text style={styles.textContainer}>{request.name}</Text>
+                        </ImageBackground>
+                    </RectButton>
+                ))
+            }
+        </ScrollView>
     )
 }
