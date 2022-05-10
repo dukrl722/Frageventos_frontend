@@ -10,7 +10,7 @@ import { Register } from "../screens/Register";
 import { TermsUse } from "../screens/TermsUse"
 import { NavigationContainer } from '@react-navigation/native';
 import { NewEvent } from '../screens/NewEvent';
-
+import { Menu } from '../screens/Menu';
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -46,6 +46,10 @@ export function AuthRoutes() {
                 <Screen
                     name="Categories"
                     component={Categories}
+                />
+                <Screen
+                    name="Menu"
+                    component={Menu}
                 />
             </Navigator>
         </NavigationContainer>
