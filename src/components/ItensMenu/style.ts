@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
     buttons: {
+        width:'50%',
         flexDirection: 'row',
         alignItems: "center",
         marginLeft: 50,
