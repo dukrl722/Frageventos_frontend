@@ -11,7 +11,7 @@ export function Menu() {
     const navigation = useNavigation()
     return (
         <ImageBackground style={styles.background} source={Background}>
-            <View style={{ width: '100%', height: '20%' }}>
+            <View style={styles.header}>
                 <Feather
                     name={'arrow-left'}
                     color={'black'}
@@ -20,7 +20,7 @@ export function Menu() {
                     style={styles.arrow}
                 />
             </View>
-            <ItensMenu admin={false} />
+            <ItensMenu admin={true} />
         </ImageBackground>
     );
 }

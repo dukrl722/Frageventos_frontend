@@ -13,5 +13,9 @@ export const styles = StyleSheet.create({
         left: 30,
         top: getStatusBarHeight() + 35,
         color: theme.colors.ArrowIcon
+    },
+    header: {
+        width: '100%',
+        height: '20%'
     }
 });

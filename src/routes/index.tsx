@@ -1,16 +1,18 @@
 import React from 'react';
-import { createStackNavigator } from "@react-navigation/stack";
 
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
 import { theme } from '../global/styles/theme';
 
-import { Login } from "../screens/Login";
-import { Events } from "../screens/Events";
+import { ProfileEditing } from '../screens/ProfileEditing';
 import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
-import { TermsUse } from "../screens/TermsUse"
-import { NavigationContainer } from '@react-navigation/native';
 import { NewEvent } from '../screens/NewEvent';
+import { TermsUse } from "../screens/TermsUse";
+import { Events } from "../screens/Events";
+import { Login } from "../screens/Login";
 import { Menu } from '../screens/Menu';
+
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -50,6 +52,10 @@ export function AuthRoutes() {
                 <Screen
                     name="Menu"
                     component={Menu}
+                />
+                 <Screen
+                    name="ProfileEditing"
+                    component={ProfileEditing}
                 />
             </Navigator>
         </NavigationContainer>
