@@ -1,9 +1,11 @@
 export const theme = {
     colors: {
         primary: '#4F4F4F',
-        white:'#fff',
+        white: '#fff',
+        green: '#018001',
         secondary: '#626060',
-
+        black: '#000',
+        
         input: '#000',
         textInput: '#FFF',
         buttonLogin: '#34FF00',
@@ -21,13 +23,13 @@ export const theme = {
         TermsDisabled: '#c4c4c4',
         checkBox: '#7d7d7d',
 
-        inputRegister:'#c4c4c4'
+        inputRegister: '#c4c4c4'
     },
 
     fonts: {
         title700: 'Montserrat_700Bold',
         text400: 'Montserrat_400Regular',
         text500: 'Montserrat_500Medium',
-        text600:'Montserrat_600SemiBold'
+        text600: 'Montserrat_600SemiBold'
     }
 };

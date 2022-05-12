@@ -27,8 +27,8 @@ export function InputProfiles({ security, type, textPlace, ...rest }: Props) {
                     <TextInput
                         secureTextEntry={security ? true : false}
                         keyboardType={type ? type : 'default'}
-                        placeholderTextColor="white"
-                        style={[{ color: 'white' }]}
+                        placeholderTextColor={theme.colors.white}
+                        style={{color:theme.colors.white}}
                     />
 
                 </View>
@@ -43,7 +43,7 @@ export function InputProfiles({ security, type, textPlace, ...rest }: Props) {
                     <TextInput
                         secureTextEntry={eyes}
                         keyboardType='default'
-                        placeholderTextColor="white"
+                        placeholderTextColor={theme.colors.white}
                         style={styles.textInput}
                     />
                 </View>
@@ -62,7 +62,6 @@ export function InputProfiles({ security, type, textPlace, ...rest }: Props) {
                     </View>
                 </RectButton>
             </View>
-
         </View>
     )
 }

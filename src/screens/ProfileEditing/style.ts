@@ -55,7 +55,7 @@ export const styles = StyleSheet.create({
         borderRadius: 50,
         width: '40%',
         height: '8%',
-        backgroundColor: 'green',
+        backgroundColor: theme.colors.green,
         marginTop: 40
     },
     textButton: {
@@ -66,5 +66,9 @@ export const styles = StyleSheet.create({
     title: {
         flexDirection: 'row',
         width: '80%'
+    },
+    subtitle: {
+        color: theme.colors.white,
+        fontFamily: theme.fonts.text400
     }
 });

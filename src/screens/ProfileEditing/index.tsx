@@ -20,7 +20,7 @@ export function ProfileEditing() {
             <View style={styles.cabecalho}>
                 <Feather
                     name={'arrow-left'}
-                    color={'black'}
+                    color={theme.colors.black}
                     size={25}
                     onPress={navigation.goBack}
                     style={styles.arrow}
@@ -33,7 +33,7 @@ export function ProfileEditing() {
                 </View>
                 <View style={styles.title}>
                     <EvilIcons name="pencil" size={24} color={theme.colors.white} />
-                    <Text style={{ color: theme.colors.white, fontFamily: theme.fonts.text400 }}>
+                    <Text style={styles.subtitle}>
                         Editar Perfil
                     </Text>
                 </View>
@@ -49,7 +49,5 @@ export function ProfileEditing() {
                 </RectButton>
             </View>
         </ImageBackground>
-
-
     );
 }
