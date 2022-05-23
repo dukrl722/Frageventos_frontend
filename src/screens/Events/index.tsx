@@ -1,16 +1,16 @@
 import React from 'react';
 
 import { Background } from "../../components/Background";
-import { Header } from "../../components/Header";
 import { Filter } from '../../components/Filter';
 import { Event } from "../../components/Event";
 import { View } from 'react-native';
 import { styles } from './style';
+import { HeaderMenu } from '../../components/HeaderMenu';
 
 export function Events() {
     return (
         <Background>
-            <Header object='menu' />
+            <HeaderMenu/>
             <View style={styles.viewContent}>
                 <Filter />
                 <Event />

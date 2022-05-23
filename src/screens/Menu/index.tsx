@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Background from '../../assets/background.png';
 
-import { useNavigation } from "@react-navigation/native";
+import {  ImageBackground, Animated, Pressable } from 'react-native';
 import { ItensMenu } from '../../components/ItensMenu';
-import { View, ImageBackground } from 'react-native';
-import { theme } from '../../global/styles/theme';
-import { Feather } from '@expo/vector-icons';
 import { styles } from './style';
 
-export function Menu() {
-    const navigation = useNavigation()
+type Props = {
+    ModalMinimaze: boolean
+}
+
+export function Menu({ ModalMinimaze }: Props) {
+    const largura = useRef(new Animated.Value(0)).current;
+    
+    Animated.timing(largura, {
+        toValue: 300,
+        duration: 500,
+        useNativeDriver: false
+    }).start();
+    
     return (
-        <ImageBackground style={styles.background} source={Background}>
-            <View style={styles.header}>
-                <Feather
-                    name={'arrow-left'}
-                    color={theme.colors.black}
-                    size={25}
-                    onPress={navigation.goBack}
-                    style={styles.arrow}
-                />
-            </View>
-            <ItensMenu admin={true} />
-        </ImageBackground>
+        <>
+            <Animated.View style={{
+                width: largura,
+                height: '100%',
+            }}>
+                <ImageBackground style={styles.background} source={Background}>
+                    <ItensMenu admin={true} ModalMinimaze={ModalMinimaze} />
+                </ImageBackground>
+            </Animated.View>
+            <Pressable style={styles.minimaze} onPress={() => ModalMinimaze(false)} />
+        </>
     );
 }
