@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native';
 import { theme } from '../global/styles/theme';
 
+import { PasswordEditing } from '../screens/PasswordEditing';
 import { ProfileEditing } from '../screens/ProfileEditing';
 import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
@@ -53,9 +54,13 @@ export function AuthRoutes() {
                     name="Menu"
                     component={Menu}
                 />
-                 <Screen
+                <Screen
                     name="ProfileEditing"
                     component={ProfileEditing}
+                />
+                <Screen
+                    name="PasswordEditing"
+                    component={PasswordEditing}
                 />
             </Navigator>
         </NavigationContainer>

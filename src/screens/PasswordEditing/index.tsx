@@ -1,19 +1,18 @@
 import React from 'react';
-import { View, Text, ScrollView, ImageBackground, Image } from 'react-native';
-import { Header } from '../../components/Header';
 import Background from '../../assets/background.png';
-import { Feather } from '@expo/vector-icons';
 import Logo from '../../assets/splash.png';
-import Profile from '../../assets/Profile.png';
-import { EvilIcons } from '@expo/vector-icons';
-import { styles } from './style';
-import { useNavigation } from "@react-navigation/native";
-import { InputProfiles } from '../../components/InputProfiles';
-import { FlatList, RectButton } from 'react-native-gesture-handler';
-import { theme } from '../../global/styles/theme';
-import { profile } from '../../utils/Profile';
 
-export function ProfileEditing() {
+import { FlatList, RectButton } from 'react-native-gesture-handler';
+import { View, Text, ImageBackground, Image } from 'react-native';
+import { InputProfiles } from '../../components/InputProfiles';
+import { useNavigation } from "@react-navigation/native";
+import { theme } from '../../global/styles/theme';
+import { Fontisto } from '@expo/vector-icons';
+import { profile } from '../../utils/Profile';
+import { Feather } from '@expo/vector-icons';
+import { styles } from './style';
+
+export function PasswordEditing() {
     const navigation = useNavigation()
 
     return (
@@ -29,25 +28,30 @@ export function ProfileEditing() {
                 <Image source={Logo} style={styles.imageContainer} />
             </View>
             <View style={styles.profileInfos}>
-                <FlatList  keyExtractor={item => item.id} data={profile} renderItem={({ item }) => (
-                    <View style={styles.imgProfileContainer}>
-                        <Image source={item.image} style={styles.imageProfile} />
-                    </View>
+                <FlatList keyExtractor={item => item.id} data={profile} renderItem={({ item }) => (
+                    <>
+                        <View style={styles.imgProfileContainer}>
+                            <Image source={item.image} style={styles.imageProfile} />
+                            <Text style={styles.NameUser}>
+                                {item.name}
+                            </Text>
+                        </View>
+                    </>
                 )} />
                 <View style={styles.title}>
-                    <EvilIcons name="pencil" size={24} color={theme.colors.white} />
+                    <Fontisto name="locked" size={15} color={theme.colors.white} />
                     <Text style={styles.subtitle}>
-                        Editar Perfil
+                        Alterar Senha
                     </Text>
                 </View>
                 <View style={styles.inputs}>
-                    <InputProfiles textPlace='Nome Sobrenome' />
-                    <InputProfiles textPlace='Telefone' type='numeric' />
-                    <InputProfiles textPlace='Email' type='email-address' />
+                    <InputProfiles textPlace='Senha Atual' security />
+                    <InputProfiles textPlace='Nova Senha' security />
+                    <InputProfiles textPlace='Repetir Nova Senha' security />
                 </View>
                 <RectButton style={styles.button}>
                     <Text style={styles.textButton}>
-                        Editar Perfil
+                        Alterar Senha
                     </Text>
                 </RectButton>
             </View>
