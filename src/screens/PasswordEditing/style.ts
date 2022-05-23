@@ -37,12 +37,12 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     imageProfile: {
-        width: 200,
-        height: 200,
+        width: 140,
+        height: 140,
     },
     imgProfileContainer: {
-        width: 220,
-        height: 220,
+        width: 150,
+        height: 150,
         backgroundColor: theme.colors.white,
         borderRadius: 120,
         alignItems: 'center',
@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
         width: '40%',
         height: '8%',
         backgroundColor: theme.colors.green,
-        marginTop: 30,
+        marginTop: 40,
         marginBottom:50
     },
     textButton: {
@@ -66,10 +66,17 @@ export const styles = StyleSheet.create({
     },
     title: {
         flexDirection: 'row',
-        width: '80%',
+        width: '80%'
     },
     subtitle: {
         color: theme.colors.white,
-        fontFamily: theme.fonts.text400
+        fontFamily: theme.fonts.text400,
+        marginLeft:7
     },
+    NameUser:{
+        position:'absolute',
+        bottom:-30,
+        fontSize:16,
+        fontFamily:theme.fonts.text500
+    }
 });

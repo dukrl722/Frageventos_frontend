@@ -1,12 +1,12 @@
 import React from 'react';
+import Background from '../../assets/background.png';
 
 import { useNavigation } from "@react-navigation/native";
 import { ItensMenu } from '../../components/ItensMenu';
-import Background from '../../assets/background.png';
 import { View, ImageBackground } from 'react-native';
+import { theme } from '../../global/styles/theme';
 import { Feather } from '@expo/vector-icons';
 import { styles } from './style';
-import { theme } from '../../global/styles/theme';
 
 export function Menu() {
     const navigation = useNavigation()

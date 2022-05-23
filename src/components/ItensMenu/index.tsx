@@ -2,10 +2,10 @@ import React from 'react';
 
 import { MaterialCommunityIcons, Fontisto, EvilIcons } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from "@react-navigation/native";
 import { theme } from '../../global/styles/theme';
 import { View, Text } from 'react-native';
 import { styles } from './style';
-import { useNavigation } from "@react-navigation/native";
 
 type Props = {
     admin: boolean
@@ -22,6 +22,10 @@ export function ItensMenu({ admin }: Props) {
         //@ts-ignore
         navigation.navigate("ProfileEditing");
     }
+    function handleEditPassword() {
+        //@ts-ignore
+        navigation.navigate("PasswordEditing");
+    }
     return (
         <View style={styles.container}>
             <RectButton style={styles.buttons} onPress={handleEditProfile}>
@@ -32,7 +36,7 @@ export function ItensMenu({ admin }: Props) {
                 <MaterialCommunityIcons name="bell" size={24} color={theme.colors.white} />
                 <Text style={styles.text}>Notificações</Text>
             </RectButton>
-            <RectButton style={styles.buttons}>
+            <RectButton style={styles.buttons} onPress={handleEditPassword}>
                 <Fontisto name="locked" size={24} color={theme.colors.white} />
                 <Text style={[styles.text, { marginLeft: 9 }]}>Alterar Senha</Text>
             </RectButton>
