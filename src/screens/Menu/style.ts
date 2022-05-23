@@ -17,5 +17,12 @@ export const styles = StyleSheet.create({
     header: {
         width: '100%',
         height: '20%'
-    }
+    },
+    minimaze: {
+        right: 0,
+        top: 0,
+        width: '20%',
+        height: '100%',
+        position: 'absolute',
+    },
 });

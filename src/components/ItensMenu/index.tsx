@@ -8,25 +8,28 @@ import { styles } from './style';
 import { useNavigation } from "@react-navigation/native";
 
 type Props = {
-    admin: boolean
+    admin: boolean;
+    ModalMinimaze?: boolean
 }
 
-export function ItensMenu({ admin }: Props) {
+export function ItensMenu({ admin, ModalMinimaze }: Props) {
     const navigation = useNavigation()
 
     function handleNewEvent() {
+        ModalMinimaze(false)
         //@ts-ignore
         navigation.navigate("NewEvent");
     }
     function handleEditProfile() {
+        ModalMinimaze(false)
         //@ts-ignore
         navigation.navigate("ProfileEditing");
     }
     return (
         <View style={styles.container}>
-            <RectButton style={styles.buttons} onPress={handleEditProfile}>
-                <EvilIcons name="pencil" size={28} color={theme.colors.white} />
-                <Text style={[styles.text, { marginLeft: 0 }]}>Editar Perfil</Text>
+            <RectButton style={styles.buttons}>
+                <EvilIcons name="pencil" size={28} color={theme.colors.white} onPress={handleEditProfile}/>
+                <Text style={[styles.text, { marginLeft: 0 }]} onPress={handleEditProfile}>Editar Perfil</Text>
             </RectButton>
             <RectButton style={styles.buttons}>
                 <MaterialCommunityIcons name="bell" size={24} color={theme.colors.white} />
@@ -43,9 +46,9 @@ export function ItensMenu({ admin }: Props) {
                 </RectButton>
             </View>
             <View style={admin == false ? { display: 'none' } : { display: 'flex' }}>
-                <RectButton style={styles.buttons} onPress={handleNewEvent}>
-                    <MaterialCommunityIcons name="calendar-check" size={24} color={theme.colors.white} />
-                    <Text style={styles.text}>Criar Eventos</Text>
+                <RectButton style={styles.buttons} >
+                    <MaterialCommunityIcons name="calendar-check" size={24} color={theme.colors.white} onPress={handleNewEvent}/>
+                    <Text style={styles.text} onPress={handleNewEvent}>Criar Eventos</Text>
                 </RectButton>
                 <RectButton style={styles.buttons}>
                     <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} />
