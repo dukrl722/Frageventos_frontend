@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { theme } from '../global/styles/theme';
 
 import { PasswordEditing } from '../screens/PasswordEditing';
+import { HandleHistoric } from '../screens/HandleHistoric';
 import { ProfileEditing } from '../screens/ProfileEditing';
 import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
@@ -61,6 +62,10 @@ export function AuthRoutes() {
                 <Screen
                     name="PasswordEditing"
                     component={PasswordEditing}
+                />
+                <Screen
+                    name="HandleHistoric"
+                    component={HandleHistoric}
                 />
             </Navigator>
         </NavigationContainer>
