@@ -3,8 +3,7 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        height: 600,
-        marginBottom: 15
+        flex:1
     },
     textContainer: {
         fontFamily: theme.fonts.text600,

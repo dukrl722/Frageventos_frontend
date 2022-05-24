@@ -1,8 +1,8 @@
-import ShowZeNeto from '../assets/ShowZeNeto.png'
 import ShowBrunoMarrone from '../assets/ShowBrunoMarrone.png'
 import ShowZeVaqueiro from '../assets/ShowZeVaqueiro.png'
-import ShowZeze from '../assets/ShowZeze.png'
+import ShowZeNeto from '../assets/ShowZeNeto.png'
 import ShowCPM22 from '../assets/ShowCPM22.png'
+import ShowZeze from '../assets/ShowZeze.png'
 
 export const events = [
     {
@@ -40,5 +40,4 @@ export const events = [
         day: '04',
         month: 'FEV'
     },
-
 ]
