@@ -39,15 +39,23 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
         //@ts-ignore
         navigation.navigate("HandleHistoric");
     }
+    function handleEventEdit() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("EventEdit");
+    }
+    function handleExit() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("Login");
+    }
     return (
         <View style={styles.container}>
             <RectButton style={styles.buttons}>
                 <EvilIcons name="pencil" size={28} color={theme.colors.white} onPress={handleEditProfile} />
                 <Text style={[styles.text, { marginLeft: 0 }]} onPress={handleEditProfile}>Editar Perfil</Text>
-            </RectButton>
-            <RectButton style={styles.buttons}>
-                <MaterialCommunityIcons name="bell" size={24} color={theme.colors.white} />
-                <Text style={styles.text}>Notificações</Text>
             </RectButton>
             <RectButton style={styles.buttons} >
                 <Fontisto name="locked" size={24} color={theme.colors.white} onPress={handleEditPassword} />
@@ -65,8 +73,12 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
                     <Text style={styles.text} onPress={handleNewEvent}>Criar Eventos</Text>
                 </RectButton>
                 <RectButton style={styles.buttons}>
-                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} />
-                    <Text style={styles.text}>Eventos Criados</Text>
+                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleEventEdit} />
+                    <Text style={styles.text} onPress={handleEventEdit}>Eventos Criados</Text>
+                </RectButton>
+                <RectButton style={styles.buttons}>
+                    <MaterialCommunityIcons name="exit-run" size={24} color={theme.colors.white} onPress={handleExit} />
+                    <Text style={styles.text} onPress={handleExit}>Sair</Text>
                 </RectButton>
             </View>
         </View>

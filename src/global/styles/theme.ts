@@ -22,8 +22,11 @@ export const theme = {
         TermsEnabled: '#5b3458',
         TermsDisabled: '#c4c4c4',
         checkBox: '#7d7d7d',
-
-        inputRegister: '#c4c4c4'
+        boxImageLinear1:'#fff',
+        boxImageLinear2:'#9a9a9a',
+        boxInfo:'#8a8787',
+        inputRegister: '#c4c4c4',
+        rgbTransparent:'rgba(52, 52, 52, 0.7)'
     },
 
     fonts: {
