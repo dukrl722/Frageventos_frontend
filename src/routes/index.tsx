@@ -6,6 +6,7 @@ import { theme } from '../global/styles/theme';
 
 import { PasswordEditing } from '../screens/PasswordEditing';
 import { ProfileEditing } from '../screens/ProfileEditing';
+import { EventsCreated } from '../screens/EventsCreated';
 import { Categories } from "../screens/Categories";
 import { Register } from "../screens/Register";
 import { NewEvent } from '../screens/NewEvent';
@@ -61,6 +62,10 @@ export function AuthRoutes() {
                 <Screen
                     name="PasswordEditing"
                     component={PasswordEditing}
+                />
+                <Screen
+                    name="EventsCreated"
+                    component={EventsCreated}
                 />
             </Navigator>
         </NavigationContainer>

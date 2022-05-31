@@ -33,6 +33,12 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
         //@ts-ignore
         navigation.navigate("PasswordEditing");
     }
+    function handleEventsCreate() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("EventsCreated");
+    }
     return (
         <View style={styles.container}>
             <RectButton style={styles.buttons}>
@@ -59,8 +65,8 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
                     <Text style={styles.text} onPress={handleNewEvent}>Criar Eventos</Text>
                 </RectButton>
                 <RectButton style={styles.buttons}>
-                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} />
-                    <Text style={styles.text}>Eventos Criados</Text>
+                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleEventsCreate} />
+                    <Text style={styles.text} onPress={handleEventsCreate} >Eventos Criados</Text>
                 </RectButton>
             </View>
         </View>
