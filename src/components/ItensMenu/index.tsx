@@ -39,6 +39,12 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
         //@ts-ignore
         navigation.navigate("EventsCreated");
     }
+    function handleHistoric() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("HandleHistoric");
+    }
     return (
         <View style={styles.container}>
             <RectButton style={styles.buttons}>
@@ -55,8 +61,8 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
             </RectButton>
             <View style={admin == true ? { display: 'none' } : { display: 'flex' }}>
                 <RectButton style={styles.buttons}>
-                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} />
-                    <Text style={styles.text}>Historico de Eventos</Text>
+                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleHistoric}/>
+                    <Text style={styles.text} onPress={handleHistoric}>Historico de Eventos</Text>
                 </RectButton>
             </View>
             <View style={admin == false ? { display: 'none' } : { display: 'flex' }}>

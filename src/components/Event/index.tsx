@@ -1,33 +1,39 @@
 import React from 'react';
-import { Image, ImageBackground, Text, View } from 'react-native';
 
+import { ImageBackground, Text, View } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 import { styles } from './style';
 
-import EventImage from '../../assets/backgroundEvent.png';
-import { RectButton, ScrollView } from 'react-native-gesture-handler';
+export type EventProps = {
+    id: string;
+    name: string;
+    image: string;
+    day: string;
+    month: string;
+}
 
-import { events } from '../../utils/Events';
+type Props = {
+    data: EventProps;
+}
 
-export function Event() {
+export function Event({ data }: Props) {
     return (
-        <ScrollView style={styles.container}>
-            {
-                events.map((request, i) => (
-                    <RectButton key={i}>
-                        <ImageBackground source={request.image} style={styles.imageContainer}>
-                            <View style={styles.date}>
-                                <Text style={styles.dateDay}>
-                                    {request.day}
-                                </Text>
-                                <Text style={styles.dateMonth}>
-                                    {request.month}
-                                </Text>
-                            </View>
-                            <Text style={styles.textContainer}>{request.name}</Text>
-                        </ImageBackground>
-                    </RectButton>
-                ))
-            }
-        </ScrollView>
+        <View style={styles.container}>
+            <RectButton >
+                <ImageBackground source={data.image} style={styles.imageContainer}>
+                    
+                    <View style={styles.date}>
+                        <Text style={styles.dateDay}>
+                            {data.day}
+                        </Text>
+                        <Text style={styles.dateMonth}>
+                            {data.month}
+                        </Text>
+                    </View>
+                    <Text style={styles.textContainer}>{data.name}</Text>
+                </ImageBackground>
+            </RectButton>
+        </View>
+
     )
 }

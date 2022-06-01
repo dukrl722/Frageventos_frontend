@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { theme } from '../global/styles/theme';
 
 import { PasswordEditing } from '../screens/PasswordEditing';
+import { HandleHistoric } from '../screens/HandleHistoric';
 import { ProfileEditing } from '../screens/ProfileEditing';
 import { EventsCreated } from '../screens/EventsCreated';
 import { Categories } from "../screens/Categories";
@@ -14,7 +15,7 @@ import { TermsUse } from "../screens/TermsUse";
 import { Events } from "../screens/Events";
 import { Login } from "../screens/Login";
 import { Menu } from '../screens/Menu';
-
+import { Teste } from '../screens/Teste';
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -66,6 +67,14 @@ export function AuthRoutes() {
                 <Screen
                     name="EventsCreated"
                     component={EventsCreated}
+                />
+                <Screen
+                    name="HandleHistoric"
+                    component={HandleHistoric}
+                />
+                <Screen
+                    name="Teste"
+                    component={Teste}
                 />
             </Navigator>
         </NavigationContainer>

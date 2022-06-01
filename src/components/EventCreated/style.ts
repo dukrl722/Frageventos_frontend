@@ -3,8 +3,7 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        height: 600,
-        marginBottom: 15
+        flex:1
     },
     textContainer: {
         fontFamily: theme.fonts.text600,
@@ -17,7 +16,7 @@ export const styles = StyleSheet.create({
         marginBottom: 15,
         borderRadius: 8,
         height: 200,
-        justifyContent: "center",
+        justifyContent: "center"
     },
     date: {
         width: 60,
@@ -32,11 +31,11 @@ export const styles = StyleSheet.create({
     },
     dateDay: {
         fontFamily: theme.fonts.title700,
-        fontSize: 22
+        fontSize:22
     },
     dateMonth: {
         fontFamily: theme.fonts.text400,
-        fontSize: 12
+        fontSize:12
     },
     pencil: {
         position: 'absolute',
