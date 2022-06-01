@@ -1,21 +1,13 @@
 import React from 'react';
-import { RectButton } from 'react-native-gesture-handler';
-import { Background } from "../../components/Background";
-import { theme } from '../../global/styles/theme';
-import { useNavigation } from '@react-navigation/native';
-import { Text, View } from 'react-native';
-
-import { styles } from './style';
-import Lottie from 'lottie-react-native';
-
-import balao from '../../assets/balao.json'
-import cat from '../../assets/cat.json'
-import monkey from '../../assets/monkey.json'
-import maozinha from '../../assets/maozinha.json'
-import efects from '../../assets/efects.json'
 
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
+import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
+import balao from '../../assets/balao.json'
+import { Text, View } from 'react-native';
+import Lottie from 'lottie-react-native';
+import cat from '../../assets/cat.json'
+import { styles } from './style';
 
 export function EditConfirmed() {
     const navigation = useNavigation()
