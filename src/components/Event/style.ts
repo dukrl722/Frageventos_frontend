@@ -32,11 +32,11 @@ export const styles = StyleSheet.create({
     dateDay: {
         fontFamily: theme.fonts.title700,
         fontSize:22,
-        color:theme.colors.white
+        color:theme.colors.black
     },
     dateMonth: {
         fontFamily: theme.fonts.text400,
         fontSize:12,
-        color:theme.colors.white
+        color:theme.colors.black
     }
 });

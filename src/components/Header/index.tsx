@@ -26,7 +26,7 @@ export function Header({ object, ...rest }: Props) {
         <LinearGradient colors={[headerPrimary, headerSecondary]} style={styles.container}>
             <Feather
                 name={object ? object : ""}
-                color={'black'}
+                color={'white'}
                 size={25}
                 onPress={object == 'menu' ? handleMenu : navigation.goBack}
                 style={styles.arrow}

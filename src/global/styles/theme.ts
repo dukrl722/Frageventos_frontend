@@ -19,6 +19,7 @@ export const theme = {
         EyesIcons: '#bfc6d5',
         ArrowIcon: '#FFF',
 
+        FundoEdit:'#5b3458',
         TermsEnabled: '#5b3458',
         TermsDisabled: '#c4c4c4',
         checkBox: '#7d7d7d',

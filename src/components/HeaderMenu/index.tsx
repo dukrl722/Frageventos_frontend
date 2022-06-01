@@ -24,7 +24,7 @@ export function HeaderMenu() {
             <View style={styles.arrow}>
                 <Feather
                     name={'menu'}
-                    color={'black'}
+                    color={'white'}
                     size={25}
                     onPress={() => {
                         setOpenMenuModal(!openMenuModal)
