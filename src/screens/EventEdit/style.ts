@@ -137,7 +137,6 @@ export const styles = StyleSheet.create({
         marginRight: 10
     },
     confirm: {
-        width: '100%',
         marginTop: 50,
         marginBottom: 10,
         alignItems: 'center',

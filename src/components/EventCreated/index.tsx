@@ -19,7 +19,7 @@ type Props = {
     data: EventProps;
 }
 
-export function EventCreated({  data }: Props) {
+export function EventCreated({ data }: Props) {
     const navigation = useNavigation()
     const [check, setCheck] = useState(data.day > 5);
 
@@ -28,7 +28,7 @@ export function EventCreated({  data }: Props) {
             <RectButton enabled={check}>
                 <ImageBackground source={data.image} style={[styles.imageContainer, {
                     opacity: data.day < 5
-                        ? 0.4: 1
+                        ? 0.4 : 1
                 }]}>
                     {data.day < 5 ?
                         <View style={styles.expirado}>
@@ -38,11 +38,10 @@ export function EventCreated({  data }: Props) {
                             </Text>
                         </View>
                         :
-                        <RectButton style={styles.pencil} onPress={() => [
-                            ,
-                            navigation.navigate('Teste', {
+                        <RectButton style={styles.pencil} onPress={() =>                     
+                            navigation.navigate('EventEdit', {
                                 paramKey: data,
-                            })]}
+                            })}
                         >
                             <EvilIcons name="pencil" size={28} color={theme.colors.white} />
                             <Text>

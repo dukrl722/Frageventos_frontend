@@ -31,10 +31,12 @@ export const styles = StyleSheet.create({
     },
     dateDay: {
         fontFamily: theme.fonts.title700,
+        color:theme.colors.black,
         fontSize:22
     },
     dateMonth: {
         fontFamily: theme.fonts.text400,
+        color:theme.colors.black,
         fontSize:12
     },
     pencil: {
