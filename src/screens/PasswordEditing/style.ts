@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
         position:'absolute',
         bottom:-30,
         fontSize:16,
-        fontFamily:theme.fonts.text500
+        fontFamily:theme.fonts.text500,
+        color:theme.colors.white
     }
 });

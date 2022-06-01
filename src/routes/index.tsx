@@ -9,6 +9,7 @@ import { HandleHistoric } from '../screens/HandleHistoric';
 import { ProfileEditing } from '../screens/ProfileEditing';
 import { EventsCreated } from '../screens/EventsCreated';
 import { Categories } from "../screens/Categories";
+import { EventEdit } from '../screens/EventEdit';
 import { Register } from "../screens/Register";
 import { NewEvent } from '../screens/NewEvent';
 import { TermsUse } from "../screens/TermsUse";
@@ -28,6 +29,7 @@ export function AuthRoutes() {
                         backgroundColor: theme.colors.primary
                     }
                 }}>
+
                 <Screen
                     name="Login"
                     component={Login}
@@ -75,6 +77,10 @@ export function AuthRoutes() {
                 <Screen
                     name="Teste"
                     component={Teste}
+                />
+                <Screen
+                    name="EventEdit"
+                    component={EventEdit}
                 />
             </Navigator>
         </NavigationContainer>

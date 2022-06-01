@@ -5,7 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { theme } from "../../global/styles/theme";
 import { Feather } from '@expo/vector-icons';
 import Logo from '../../assets/splash.png';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import { styles } from './style';
 import { ModalView } from '../ModalView';
 import { Menu } from '../../screens/Menu';
@@ -21,15 +21,16 @@ export function HeaderMenu() {
 
     return (
         <LinearGradient colors={[headerPrimary, headerSecondary]} style={styles.container}>
-            <Feather
-                name={'menu'}
-                color={'black'}
-                size={25}
-                onPress={() => {
-                    setOpenMenuModal(!openMenuModal)
-                }}
-                style={styles.arrow}
-            />
+            <View style={styles.arrow}>
+                <Feather
+                    name={'menu'}
+                    color={'black'}
+                    size={25}
+                    onPress={() => {
+                        setOpenMenuModal(!openMenuModal)
+                    }}
+                />
+            </View>
             <Image source={Logo} style={styles.imageContainer} />
             <ModalView visible={openMenuModal}
             >
