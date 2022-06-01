@@ -25,7 +25,7 @@ export function Menu({ ModalMinimaze }: Props) {
                 height: '100%',
             }}>
                 <ImageBackground style={styles.background} source={Background}>
-                    <ItensMenu admin={false} ModalMinimaze={ModalMinimaze} />
+                    <ItensMenu admin={true} ModalMinimaze={ModalMinimaze} />
                 </ImageBackground>
             </Animated.View>
             <Pressable style={styles.minimaze} onPress={() => ModalMinimaze(false)} />
