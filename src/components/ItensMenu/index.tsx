@@ -33,6 +33,12 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
         //@ts-ignore
         navigation.navigate("PasswordEditing");
     }
+    function handleEventsCreate() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("EventsCreated");
+    }
     function handleHistoric() {
         //@ts-ignore
         ModalMinimaze(false)
@@ -63,7 +69,7 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
             </RectButton>
             <View style={admin == true ? { display: 'none' } : { display: 'flex' }}>
                 <RectButton style={styles.buttons}>
-                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleHistoric}/>
+                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleHistoric} />
                     <Text style={styles.text} onPress={handleHistoric}>Historico de Eventos</Text>
                 </RectButton>
             </View>
@@ -73,8 +79,8 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
                     <Text style={styles.text} onPress={handleNewEvent}>Criar Eventos</Text>
                 </RectButton>
                 <RectButton style={styles.buttons}>
-                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleEventEdit} />
-                    <Text style={styles.text} onPress={handleEventEdit}>Eventos Criados</Text>
+                    <MaterialCommunityIcons name="calendar-clock" size={24} color={theme.colors.white} onPress={handleEventsCreate} />
+                    <Text style={styles.text} onPress={handleEventsCreate} >Eventos Criados</Text>
                 </RectButton>
                 <RectButton style={styles.buttons}>
                     <MaterialCommunityIcons name="exit-run" size={24} color={theme.colors.white} onPress={handleExit} />

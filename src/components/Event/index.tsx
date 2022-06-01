@@ -21,6 +21,7 @@ export function Event({ data }: Props) {
         <View style={styles.container}>
             <RectButton >
                 <ImageBackground source={data.image} style={styles.imageContainer}>
+                    
                     <View style={styles.date}>
                         <Text style={styles.dateDay}>
                             {data.day}
