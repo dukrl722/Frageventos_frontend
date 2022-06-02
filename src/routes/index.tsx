@@ -17,6 +17,7 @@ import { TermsUse } from "../screens/TermsUse";
 import { Events } from "../screens/Events";
 import { Login } from "../screens/Login";
 import { Menu } from '../screens/Menu';
+import { PagamentoCartao } from '../screens/PagamentoCartao';
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -49,6 +50,7 @@ export function AuthRoutes() {
                 <Screen
                     name="Events"
                     component={Events}
+                    // testando: PagamentoCartao
                 />
                 <Screen
                     name="Categories"
