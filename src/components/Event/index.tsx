@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ImageBackground, Text, View } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 import { styles } from './style';
 
 export type EventProps = {
@@ -17,9 +18,13 @@ type Props = {
 }
 
 export function Event({ data }: Props) {
+    const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            <RectButton >
+            <RectButton onPress={() =>                     
+                            navigation.navigate('EventInfo', {
+                                paramKey: data,
+                            })}>
                 <ImageBackground source={data.image} style={styles.imageContainer}>
                     
                     <View style={styles.date}>
