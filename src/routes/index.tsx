@@ -11,12 +11,14 @@ import { EventsCreated } from '../screens/EventsCreated';
 import { EditConfirmed } from '../screens/EditConfirmed';
 import { Categories } from "../screens/Categories";
 import { EventEdit } from '../screens/EventEdit';
+import { EventInfo } from '../screens/EventInfo';
 import { Register } from "../screens/Register";
 import { NewEvent } from '../screens/NewEvent';
 import { TermsUse } from "../screens/TermsUse";
 import { Events } from "../screens/Events";
 import { Login } from "../screens/Login";
 import { Menu } from '../screens/Menu';
+
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -81,6 +83,10 @@ export function AuthRoutes() {
                 <Screen
                     name="EditConfirmed"
                     component={EditConfirmed}
+                />
+                <Screen
+                    name="EventInfo"
+                    component={EventInfo}
                 />
             </Navigator>
         </NavigationContainer>
