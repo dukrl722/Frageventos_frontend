@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         width: 250,
         height: 45,
         borderRadius: 50,
-        top: 515,
+        top: 360,
         backgroundColor: theme.colors.buttonLogin,
         opacity: 0.7
     },

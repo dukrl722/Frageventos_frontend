@@ -49,7 +49,7 @@ export function AuthRoutes() {
                 />
                 <Screen
                     name="Events"
-                    component={Events}
+                    component={PagamentoCartao}
                     // testando: PagamentoCartao
                 />
                 <Screen
