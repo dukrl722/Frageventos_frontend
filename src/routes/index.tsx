@@ -19,7 +19,7 @@ import { Events } from "../screens/Events";
 import { Payment } from "../screens/Payment";
 import { Login } from "../screens/Login";
 import { Menu } from "../screens/Menu";
-
+import { PagamentoCartao } from "../screens/PagamentoCartao";
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
