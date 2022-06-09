@@ -3,7 +3,6 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: "white",
         flex: 1,
     },
     container_1: {
@@ -18,23 +17,24 @@ export const styles = StyleSheet.create({
     },
     container_4: {
         width: "90%",
+        height: 70,
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "space-between",
         borderRadius: 10,
         marginTop: 5,
         elevation: 1,
-        backgroundColor: theme.colors.background,
+        backgroundColor: theme.colors.Background,
     },
     tinyLogo: {
-        width: 60,
-        height: 60,
+        width: 45,
+        height: 45,
         resizeMode: "cover",
     },
     check: {
         width: 20,
         height: 20,
-        backgroundColor: theme.colors.TermsDisabled,
+        backgroundColor: theme.colors.textInput,
         borderColor: theme.colors.TermsEnabled,
         borderWidth: 2,
         borderRadius: 3,
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
         width: 20,
         height: 20,
         backgroundColor: theme.colors.TermsEnabled,
-        borderColor: theme.colors.TermsDisabled,
+        borderColor: theme.colors.textInput,
         borderWidth: 2,
         borderRadius: 3,
         marginRight: 10,
@@ -65,5 +65,8 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: theme.fonts.title700,
         textAlign: "center",
+    },
+    textEdit: {
+        fontSize: 20,
     },
 });

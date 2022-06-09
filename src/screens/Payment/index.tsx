@@ -22,12 +22,12 @@ export function Payment() {
             <Header object="arrow-left" />
             <View style={styles.container_1}>
                 <View style={styles.container_2}>
-                    <Text> Formas de Pagamento</Text>
+                    <Text style={styles.textEdit}> Formas de Pagamento</Text>
                 </View>
                 <View style={styles.container_3}>
                     <View style={styles.container_4}>
                         <Image style={styles.tinyLogo} source={Logo} />
-                        <Text>PIX</Text>
+                        <Text style={styles.textEdit}>PIX</Text>
                         <RectButton
                             style={check ? styles.checked : styles.check}
                             onPress={() => {
@@ -36,8 +36,8 @@ export function Payment() {
                         />
                     </View>
                     <View style={styles.container_4}>
-                        <EvilIcons name="credit-card" size={70} color="black" />
-                        <Text>Cartão de Credito</Text>
+                        <EvilIcons name="credit-card" size={55} color="black" />
+                        <Text style={styles.textEdit}>Cartão de Credito</Text>
                         <RectButton
                             style={check ? styles.checked : styles.check}
                             onPress={() => {
@@ -46,8 +46,8 @@ export function Payment() {
                         />
                     </View>
                     <View style={styles.container_4}>
-                        <EvilIcons name="credit-card" size={70} color="black" />
-                        <Text>Cartão de Debito</Text>
+                        <EvilIcons name="credit-card" size={55} color="black" />
+                        <Text style={styles.textEdit}>Cartão de Debito</Text>
                         <RectButton
                             style={check ? styles.checked : styles.check}
                             onPress={() => {
@@ -58,9 +58,7 @@ export function Payment() {
                 </View>
                 <View style={styles.container_2}>
                     <RectButton style={styles.buttonPag}>
-                        <Text style={styles.textButton}>
-                            Formas de Pagamento
-                        </Text>
+                        <Text style={styles.textButton}>Reservar Ingreço</Text>
                     </RectButton>
                 </View>
             </View>
