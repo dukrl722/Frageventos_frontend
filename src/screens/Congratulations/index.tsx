@@ -1,47 +1,32 @@
-import React, { useState } from "react";
-import { View, Text, ScrollView, Image, SafeAreaView } from "react-native";
+import React from "react";
 
-import { styles } from "./style";
-
-import { Header } from "../../components/Header";
-import { InputRegister } from "../../components/InputRegister";
-import { EvilIcons } from "@expo/vector-icons";
-import { theme } from "../../global/styles/theme";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
-import Logo from "../../assets/73862-confetti.json";
+import cat from "../../assets/73862-confetti.json";
+import balao from "../../assets/76411-confetti-effects-lottie-animation.json";
+import { Text, View } from "react-native";
 import Lottie from "lottie-react-native";
+import { styles } from "./style";
+import { Header } from "../../components/Header";
 
-import { Background } from "../../components/Background";
-
-export function Congratulations({ route }) {
+export function Congratulations() {
     const navigation = useNavigation();
-    function direcaoCheck() {
-        navigation.navigate("Congratulations");
-    }
-
     return (
-        <View style={styles.containerP}>
-            <Header object="arrow-left" />
-            <View style={styles.container}>
-                <SafeAreaView style={styles.Logo}>
-                    <Lottie resizeMode="contain" source={Logo} autoPlay loop />
-                </SafeAreaView>
-                <SafeAreaView style={styles.Logo}>
-                    <Lottie resizeMode="contain" source={Logo} autoPlay loop />
-                </SafeAreaView>
-                <View style={styles.containerInfos}>
-                    <Text style={styles.text}>Evento Editado</Text>
-                    <Text style={styles.text}>com sucesso</Text>
-                    <RectButton
-                        style={styles.button}
-                        onPress={() => navigation.navigate("Events")}
-                    >
-                        <Text style={styles.textButton}>
-                            Voltar Tela inicial
-                        </Text>
-                    </RectButton>
-                </View>
+        <View style={styles.container}>
+            <SafeAreaView style={styles.cat}></SafeAreaView>
+            <SafeAreaView style={styles.balao}>
+                <Lottie resizeMode="contain" source={balao} autoPlay loop />
+            </SafeAreaView>
+            <View style={styles.containerInfos}>
+                <Text style={styles.text}>Evento Editado</Text>
+                <Text style={styles.text}>com sucesso</Text>
+                <RectButton
+                    style={styles.button}
+                    onPress={() => navigation.navigate("Events")}
+                >
+                    <Text style={styles.textButton}>Voltar Tela inicial</Text>
+                </RectButton>
             </View>
         </View>
     );

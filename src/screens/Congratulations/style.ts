@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: theme.colors.FundoEdit,
     },
-    Logo: {
+    cat: {
         width: "100%",
         height: "50%",
         justifyContent: "center",
