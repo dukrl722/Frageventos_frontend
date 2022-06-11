@@ -18,6 +18,9 @@ import Logo from "../../assets/logo-pix.png";
 
 export function Pix({ route }) {
     const navigation = useNavigation();
+    function direcaoCheck() {
+        navigation.navigate("Congratulations");
+    }
 
     return (
         <View style={styles.containerP}>
@@ -41,14 +44,14 @@ export function Pix({ route }) {
                 </View>
                 <View style={styles.container3}>
                     <Text style={styles.textEdit2}>
-                        copiar código de pagamento Pix
+                        copiar código de pagamento Pix:
                     </Text>
                     <Text style={styles.textEdit3}>
                         00020126580014br.gov.bcb.pix0136123e4567-e12b-12d1-a456-426655440000
                     </Text>
                 </View>
                 <View style={styles.container4}>
-                    <RectButton style={styles.buttonPag}>
+                    <RectButton style={styles.buttonPag} onPress={direcaoCheck}>
                         <Text style={styles.textButton}>Reservar Ingreço</Text>
                     </RectButton>
                 </View>

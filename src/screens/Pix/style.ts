@@ -43,7 +43,6 @@ export const styles = StyleSheet.create({
         borderRadius: 30,
         flexDirection: "row",
         alignItems: "center",
-        marginTop: 100,
         elevation: 10,
     },
     textButton: {

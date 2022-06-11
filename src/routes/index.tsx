@@ -6,6 +6,7 @@ import { theme } from "../global/styles/theme";
 
 import { PasswordEditing } from "../screens/PasswordEditing";
 import { PagamentoCartao } from "../screens/PagamentoCartao";
+import { Congratulations } from "../screens/Congratulations";
 import { HandleHistoric } from "../screens/HandleHistoric";
 import { ProfileEditing } from "../screens/ProfileEditing";
 import { EventsCreated } from "../screens/EventsCreated";
@@ -51,6 +52,7 @@ export function AuthRoutes() {
                 <Screen name="Payment" component={Payment} />
                 <Screen name="PagamentoCartao" component={PagamentoCartao} />
                 <Screen name="Pix" component={Pix} />
+                <Screen name="Congratulations" component={Congratulations} />
             </Navigator>
         </NavigationContainer>
     );
