@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { theme } from "../global/styles/theme";
 
 import { PasswordEditing } from "../screens/PasswordEditing";
+import { PagamentoCartao } from "../screens/PagamentoCartao";
+import { Congratulations } from "../screens/Congratulations";
 import { HandleHistoric } from "../screens/HandleHistoric";
 import { ProfileEditing } from "../screens/ProfileEditing";
 import { EventsCreated } from "../screens/EventsCreated";
@@ -19,7 +21,7 @@ import { Events } from "../screens/Events";
 import { Payment } from "../screens/Payment";
 import { Login } from "../screens/Login";
 import { Menu } from "../screens/Menu";
-import { PagamentoCartao } from "../screens/PagamentoCartao";
+import { Pix } from "../screens/Pix";
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -48,6 +50,9 @@ export function AuthRoutes() {
                 <Screen name="EditConfirmed" component={EditConfirmed} />
                 <Screen name="EventInfo" component={EventInfo} />
                 <Screen name="Payment" component={Payment} />
+                <Screen name="PagamentoCartao" component={PagamentoCartao} />
+                <Screen name="Pix" component={Pix} />
+                <Screen name="Congratulations" component={Congratulations} />
             </Navigator>
         </NavigationContainer>
     );
