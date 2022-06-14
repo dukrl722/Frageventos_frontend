@@ -4,44 +4,42 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: theme.colors.FundoEdit,
+        backgroundColor: theme.colors.Background,
     },
-    cat: {
+    lott: {
         width: "100%",
-        height: "50%",
+        height: "40%",
         justifyContent: "center",
         alignItems: "center",
         marginTop: 50,
     },
-    balao: {
-        width: "100%",
-        height: "50%",
-        position: "absolute",
-        marginTop: 50,
-    },
     text: {
-        color: theme.colors.white,
+        color: theme.colors.black,
         fontFamily: theme.fonts.title700,
-        fontSize: 25,
+        fontSize: 15,
     },
     containerInfos: {
         justifyContent: "center",
         alignItems: "center",
         marginTop: 50,
     },
-    textButton: {
-        color: theme.colors.white,
-        fontFamily: theme.fonts.title700,
-        fontSize: 20,
-    },
-    button: {
-        backgroundColor: theme.colors.black,
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: 100,
+    buttonPag: {
+        width: "85%",
+        height: 50,
+        backgroundColor: theme.colors.green,
         borderRadius: 30,
-        width: "60%",
-        height: 60,
+        flexDirection: "row",
+        alignItems: "center",
         elevation: 10,
+    },
+    textButton: {
+        flex: 1,
+        color: "white",
+        fontSize: 15,
+        fontFamily: theme.fonts.title700,
+        textAlign: "center",
+    },
+    container4: {
+        paddingTop: 60,
     },
 });

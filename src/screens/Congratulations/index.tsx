@@ -3,8 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
-import cat from "../../assets/73862-confetti.json";
-import balao from "../../assets/76411-confetti-effects-lottie-animation.json";
+import lott from "../../assets/73862-confetti.json";
 import { Text, View } from "react-native";
 import Lottie from "lottie-react-native";
 import { styles } from "./style";
@@ -12,21 +11,24 @@ import { Header } from "../../components/Header";
 
 export function Congratulations() {
     const navigation = useNavigation();
+    function Volta() {
+        navigation.navigate("Events");
+    }
+
     return (
         <View style={styles.container}>
-            <SafeAreaView style={styles.cat}></SafeAreaView>
-            <SafeAreaView style={styles.balao}>
-                <Lottie resizeMode="contain" source={balao} autoPlay loop />
+            <Header object="arrow-left" />
+            <SafeAreaView style={styles.lott}>
+                <Lottie resizeMode="contain" source={lott} autoPlay loop />
             </SafeAreaView>
             <View style={styles.containerInfos}>
-                <Text style={styles.text}>Evento Editado</Text>
-                <Text style={styles.text}>com sucesso</Text>
-                <RectButton
-                    style={styles.button}
-                    onPress={() => navigation.navigate("Events")}
-                >
-                    <Text style={styles.textButton}>Voltar Tela inicial</Text>
-                </RectButton>
+                <Text style={styles.text}>Parabens ingresso reservado com</Text>
+                <Text style={styles.text}>sucesso. Tenha um ótimo Evento!</Text>
+                <View style={styles.container4}>
+                    <RectButton style={styles.buttonPag} onPress={Volta}>
+                        <Text style={styles.textButton}>Voltar ao Menu</Text>
+                    </RectButton>
+                </View>
             </View>
         </View>
     );
