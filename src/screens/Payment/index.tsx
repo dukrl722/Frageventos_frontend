@@ -8,6 +8,7 @@ import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { Background } from "../../components/Background";
 import Logo from "../../assets/logo-pix.png";
+import cartao from '../../assets/cartaozinho.png'
 
 export function Payment() {
     const navigation = useNavigation();
@@ -55,7 +56,7 @@ export function Payment() {
                             setCheck3(false);
                         }}
                     >
-                        <EvilIcons name="credit-card" size={55} color="black" />
+                         <Image style={styles.tinyLogo} source={cartao} />
                         <Text style={styles.textEdit}>Cartão de Credito</Text>
                         <RectButton
                             style={check2 ? styles.checked : styles.check}
@@ -69,7 +70,7 @@ export function Payment() {
                             setCheck2(false);
                         }}
                     >
-                        <EvilIcons name="credit-card" size={55} color="black" />
+                        <Image style={styles.tinyLogo} source={cartao} />
                         <Text style={styles.textEdit}>Cartão de Debito</Text>
                         <RectButton
                             style={check3 ? styles.checked : styles.check}

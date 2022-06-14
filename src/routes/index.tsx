@@ -88,6 +88,7 @@ export function AuthRoutes() {
                     name="EditConfirmed"
                     component={EditConfirmed}
                 />
+
                 <Screen
                     name="EventInfo"
                     component={EventInfo}
@@ -112,7 +113,8 @@ export function AuthRoutes() {
                     name="Congratulations"
                     component={Congratulations}
                 />
-            </Navigator>
-        </NavigationContainer>
+
+            </Navigator >
+        </NavigationContainer >
     );
 }
