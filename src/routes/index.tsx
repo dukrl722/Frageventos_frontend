@@ -1,25 +1,26 @@
-import React from 'react';
+import React from "react";
 
 import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from '@react-navigation/native';
-import { theme } from '../global/styles/theme';
+import { NavigationContainer } from "@react-navigation/native";
+import { theme } from "../global/styles/theme";
 
-import { PasswordEditing } from '../screens/PasswordEditing';
-import { HandleHistoric } from '../screens/HandleHistoric';
-import { ProfileEditing } from '../screens/ProfileEditing';
-import { EventsCreated } from '../screens/EventsCreated';
-import { EditConfirmed } from '../screens/EditConfirmed';
+import { PasswordEditing } from "../screens/PasswordEditing";
+import { HandleHistoric } from "../screens/HandleHistoric";
+import { ProfileEditing } from "../screens/ProfileEditing";
+import { EventsCreated } from "../screens/EventsCreated";
+import { EditConfirmed } from "../screens/EditConfirmed";
 import { Categories } from "../screens/Categories";
-import { EventEdit } from '../screens/EventEdit';
-import { EventInfo } from '../screens/EventInfo';
+import { EventEdit } from "../screens/EventEdit";
+import { EventInfo } from "../screens/EventInfo";
 import { Register } from "../screens/Register";
-import { NewEvent } from '../screens/NewEvent';
+import { NewEvent } from "../screens/NewEvent";
 import { TermsUse } from "../screens/TermsUse";
 import { Events } from "../screens/Events";
 import { Notify } from '../screens/Notify';
+import { Payment } from "../screens/Payment";
 import { Login } from "../screens/Login";
-import { Menu } from '../screens/Menu';
-
+import { Menu } from "../screens/Menu";
+import { PagamentoCartao } from "../screens/PagamentoCartao";
 const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes() {
@@ -93,7 +94,11 @@ export function AuthRoutes() {
                     name="Notify"
                     component={Notify}
                 />
+                <Screen
+                    name="Payment"
+                    component={Payment}
+                />
             </Navigator>
         </NavigationContainer>
-    )
+    );
 }
