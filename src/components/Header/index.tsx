@@ -32,6 +32,7 @@ export function Header({ object, ...rest }: Props) {
                 style={styles.arrow}
             />
             <Image source={Logo} style={styles.imageContainer} />
+            
         </LinearGradient>
     )
 }

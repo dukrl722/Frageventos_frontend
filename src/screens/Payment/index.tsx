@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 
 import { styles } from "./style";
-
 import { Header } from "../../components/Header";
-import { InputRegister } from "../../components/InputRegister";
-import { ConfirmTerms } from "../../components/ConfirmTerms";
-import { InputDescription } from "../../components/InputDescription";
 import { EvilIcons } from "@expo/vector-icons";
-import { theme } from "../../global/styles/theme";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
-
 import { Background } from "../../components/Background";
-
 import Logo from "../../assets/logo-pix.png";
+import cartao from '../../assets/cartaozinho.png'
 
-export function Payment({ route }) {
+export function Payment() {
     const navigation = useNavigation();
     const [check1, setCheck1] = useState(false);
     const [check2, setCheck2] = useState(false);
@@ -37,11 +31,11 @@ export function Payment({ route }) {
             <Header object="arrow-left" />
             <View style={styles.container_1}>
                 <View style={styles.container_2}>
-                    <Text style={styles.textEdit}> Formas de Pagamento</Text>
+                    <Text style={styles.title}> Formas de Pagamento</Text>
                 </View>
                 <View style={styles.container_3}>
                     <TouchableOpacity
-                        style={styles.container_4}
+                     style={[check1?styles.container_4:styles.container_5]}
                         onPress={() => {
                             setCheck1(!check1);
                             setCheck2(false);
@@ -55,28 +49,28 @@ export function Payment({ route }) {
                         />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={styles.container_4}
+                       style={[check2?styles.container_4:styles.container_5]}
                         onPress={() => {
                             setCheck2(!check2);
                             setCheck1(false);
                             setCheck3(false);
                         }}
                     >
-                        <EvilIcons name="credit-card" size={55} color="black" />
+                         <Image style={styles.tinyLogo} source={cartao} />
                         <Text style={styles.textEdit}>Cartão de Credito</Text>
                         <RectButton
                             style={check2 ? styles.checked : styles.check}
                         />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        style={styles.container_4}
+                        style={[check3?styles.container_4:styles.container_5]}
                         onPress={() => {
                             setCheck3(!check3);
                             setCheck1(false);
                             setCheck2(false);
                         }}
                     >
-                        <EvilIcons name="credit-card" size={55} color="black" />
+                        <Image style={styles.tinyLogo} source={cartao} />
                         <Text style={styles.textEdit}>Cartão de Debito</Text>
                         <RectButton
                             style={check3 ? styles.checked : styles.check}
