@@ -31,6 +31,65 @@ export function AuthRoutes() {
                 screenOptions={{
                     headerShown: false,
                     headerStyle: {
+<<<<<<< HEAD
+                        backgroundColor: theme.colors.primary
+                    }
+                }}>
+
+                <Screen
+                    name="Login"
+                    component={Login}
+                />
+                <Screen
+                    name="NewEvent"
+                    component={NewEvent}
+                />
+                <Screen
+                    name="TermsUse"
+                    component={TermsUse}
+                />
+                <Screen
+                    name="Register"
+                    component={Register}
+                />
+                <Screen
+                    name="Events"
+                    component={PagamentoCartao}
+                    // testando: PagamentoCartao
+                />
+                <Screen
+                    name="Categories"
+                    component={Categories}
+                />
+                <Screen
+                    name="Menu"
+                    component={Menu}
+                />
+                <Screen
+                    name="ProfileEditing"
+                    component={ProfileEditing}
+                />
+                <Screen
+                    name="PasswordEditing"
+                    component={PasswordEditing}
+                />
+                <Screen
+                    name="EventsCreated"
+                    component={EventsCreated}
+                />
+                <Screen
+                    name="HandleHistoric"
+                    component={HandleHistoric}
+                />
+                <Screen
+                    name="EventEdit"
+                    component={EventEdit}
+                />
+                <Screen
+                    name="EditConfirmed"
+                    component={EditConfirmed}
+                />
+=======
                         backgroundColor: theme.colors.primary,
                     },
                 }}
@@ -53,6 +112,7 @@ export function AuthRoutes() {
                 <Screen name="PagamentoCartao" component={PagamentoCartao} />
                 <Screen name="Pix" component={Pix} />
                 <Screen name="Congratulations" component={Congratulations} />
+>>>>>>> 5c59a01196b35d5daf7543b6dea2713e94b915bd
             </Navigator>
         </NavigationContainer>
     );

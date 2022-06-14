@@ -18,5 +18,23 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
         marginTop: 50
+    },
+    viewContent: {
+        justifyContent:'space-between',
+        alignContent:'center',
+        marginTop: 100,
+        top:30,
+    },
+    textContent: {
+        fontSize:16,
+        fontWeight:"bold",
+        left:47,
+        bottom:43,
+        
+    },
+    image: {
+        width: 100,
+        height: 60,
+        right:45,
     }
 })
