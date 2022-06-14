@@ -16,6 +16,7 @@ import { Register } from "../screens/Register";
 import { NewEvent } from '../screens/NewEvent';
 import { TermsUse } from "../screens/TermsUse";
 import { Events } from "../screens/Events";
+import { Notify } from '../screens/Notify';
 import { Login } from "../screens/Login";
 import { Menu } from '../screens/Menu';
 
@@ -87,6 +88,10 @@ export function AuthRoutes() {
                 <Screen
                     name="EventInfo"
                     component={EventInfo}
+                />
+                <Screen
+                    name="Notify"
+                    component={Notify}
                 />
             </Navigator>
         </NavigationContainer>

@@ -20,5 +20,13 @@ export const styles = StyleSheet.create({
         top: getStatusBarHeight() + 35,
         position: 'absolute',
         color: theme.colors.ArrowIcon
+    },
+    bell:{
+        width: 25,
+        alignItems: "flex-end",
+        right: 30,
+        top: getStatusBarHeight() + 35,
+        position: 'absolute',
+        color: theme.colors.ArrowIcon,
     }
 });

@@ -19,7 +19,6 @@ export function EventEdit({ route }) {
         <Background>
             <Header object='arrow-left' />
             <View style={styles.container}>
-
                 <View style={styles.box}>
                     <LinearGradient
                         colors={[theme.colors.boxImageLinear1, theme.colors.boxImageLinear2]}
@@ -105,7 +104,6 @@ export function EventEdit({ route }) {
                         </Text>
                     </RectButton>
                 </View>
-
             </View>
         </Background >
     );

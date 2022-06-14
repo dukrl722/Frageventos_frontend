@@ -10,9 +10,9 @@ type Props = {
 }
 
 export function Menu({ ModalMinimaze }: Props) {
-    const largura = useRef(new Animated.Value(0)).current;
+    const width = useRef(new Animated.Value(0)).current;
     
-    Animated.timing(largura, {
+    Animated.timing(width, {
         toValue: 300,
         duration: 500,
         useNativeDriver: false
@@ -21,7 +21,7 @@ export function Menu({ ModalMinimaze }: Props) {
     return (
         <>
             <Animated.View style={{
-                width: largura,
+                width: width,
                 height: '100%',
             }}>
                 <ImageBackground style={styles.background} source={Background}>

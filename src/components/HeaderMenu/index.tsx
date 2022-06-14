@@ -9,14 +9,19 @@ import { Image, View } from 'react-native';
 import { styles } from './style';
 import { ModalView } from '../ModalView';
 import { Menu } from '../../screens/Menu';
+import { Notify } from '../../screens/Notify';
 
 export function HeaderMenu() {
     const { headerPrimary, headerSecondary } = theme.colors;
 
     const [openMenuModal, setOpenMenuModal] = useState(false);
+    const [openNotifyModal, setopenNotifyModal] = useState(false);
 
     function ModalMinimaze() {
         setOpenMenuModal(false)
+    }
+    function ModalMinimazeNotify() {
+        setopenNotifyModal(false)
     }
 
     return (
@@ -32,9 +37,21 @@ export function HeaderMenu() {
                 />
             </View>
             <Image source={Logo} style={styles.imageContainer} />
-            <ModalView visible={openMenuModal}
-            >
+            <View style={styles.bell}>
+                <Feather
+                    name={'bell'}
+                    color={'white'}
+                    size={25}
+                    onPress={() => {
+                        setopenNotifyModal(!openNotifyModal)
+                    }}
+                />
+            </View>
+            <ModalView visible={openMenuModal}>
                 <Menu ModalMinimaze={ModalMinimaze} />
+            </ModalView>
+            <ModalView visible={openNotifyModal}>
+                <Notify ModalMinimazeNotify={ModalMinimazeNotify} />
             </ModalView>
         </LinearGradient>
     )

@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     box: {
         width: '80%',
-        height: '60%',
+        height: '65%',
         elevation: 5,
         borderRadius: 15
     },

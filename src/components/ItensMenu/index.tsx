@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MaterialCommunityIcons, Fontisto, EvilIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Fontisto, EvilIcons, Feather } from '@expo/vector-icons';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from "@react-navigation/native";
 import { theme } from '../../global/styles/theme';
@@ -15,6 +15,12 @@ type Props = {
 export function ItensMenu({ admin, ModalMinimaze }: Props) {
     const navigation = useNavigation()
 
+    function handlePrincipal() {
+        //@ts-ignore
+        ModalMinimaze(false)
+        //@ts-ignore
+        navigation.navigate("Events");
+    }
     function handleNewEvent() {
         //@ts-ignore
         ModalMinimaze(false)
@@ -59,6 +65,10 @@ export function ItensMenu({ admin, ModalMinimaze }: Props) {
     }
     return (
         <View style={styles.container}>
+            <RectButton style={styles.buttons}>
+                <Feather name="home" size={24} color={theme.colors.white} onPress={handlePrincipal} />
+                <Text style={[styles.text, { marginLeft: 4 }]} onPress={handlePrincipal}>Principal</Text>
+            </RectButton>
             <RectButton style={styles.buttons}>
                 <EvilIcons name="pencil" size={28} color={theme.colors.white} onPress={handleEditProfile} />
                 <Text style={[styles.text, { marginLeft: 0 }]} onPress={handleEditProfile}>Editar Perfil</Text>
