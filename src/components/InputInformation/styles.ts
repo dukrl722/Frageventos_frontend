@@ -1,82 +1,48 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 export const styles = StyleSheet.create({
-    container:{
-        justifyContent:'space-around',
-        alignContent:'center',
+    container: {
+        flex: 1,
     },
-    viewContent:{
-        flex:1,
-        left:5,
-        top:10,
-        flexDirection:'row',
-        width:330,
-        justifyContent:'space-between',
-        alignItems:'flex-start',
+    viewContent: {
+        marginHorizontal: 50,
+        height: 60,
+        flexDirection: 'row',
+        marginVertical: 30
     },
-    viewContent2: {
-        top:80,
-    },
-    viewContent3: {
-        top:150,
-    },
-    viewContent4: {
-        top:125,
-        left:170,
-    },
-    viewContent5: {
-        top:210,
-        left:15,
+    viewContentMini:{
+        marginHorizontal: 50,
+        width:'20%',
+        height: 60,
+        flexDirection: 'row',
+        marginVertical: 30
     },
     smallText: {
-        fontSize:10,
+        fontSize: 10,
+        top:3,
+        left:3
     },
-    smallText2: {
-        left:5,
+    inputImage: {
+        bottom: 5,
+        left:70,
+        position: 'absolute'
     },
     input: {
-        top:20,
-        right:30,
-    },
-    input2: {
-        right:80,
-    },
-    input3: {
-        right:80,
-    },
-    input4: {
-        right:80,
-    },
-    input5: {
-        right:70,
-    },
-    image: {
-        width: 100,
-        height: 60,
-        right:45,
+        bottom: 5,
+        left:10,
+        position: 'absolute'
     },
     smallImage: {
         width: 70,
         height: 40,
-        right:50,
-        top:15,
+        position: 'absolute',
+        bottom:0,
     },
     bottomLine: {
-        fontWeight:"bold",
-        fontSize:16,
-        top:45,
-        right:200,
+        fontWeight: "bold",
+        fontSize: 16,
+        top: 45,
+        justifyContent: 'flex-start',
+        position: 'absolute'
     },
-    bottomLine2: {
-        right:250,
-    },
-    bottomLine3: {
-        right:180,
-    },
-    bottomLine4: {
-        right:180,
-    },
-    bottomLine5: {
-        right:180,
-    }
 })

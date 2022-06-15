@@ -4,12 +4,11 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        padding: 10,
         width: 250,
         height: 45,
         borderRadius: 50,
-        top: 360,
-        backgroundColor: theme.colors.buttonLogin,
+        marginBottom: 20,
+        backgroundColor: theme.colors.green,
         opacity: 0.7
     },
     textContainer: {
