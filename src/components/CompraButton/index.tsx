@@ -12,13 +12,13 @@ type Props = {
 export function CompraButton({name}: Props) {
     const navigation = useNavigation();
 
-    function handleLogin() {
+    function handleDirection() {
         // @ts-ignore
-        navigation.navigate('Events');
+        navigation.navigate("Congratulations");
     }
 
     return (
-        <RectButton onPress={handleLogin} style={styles.container}>
+        <RectButton onPress={handleDirection} style={styles.container}>
             <Text style={styles.textContainer}>{name}</Text>
         </RectButton>
     )
